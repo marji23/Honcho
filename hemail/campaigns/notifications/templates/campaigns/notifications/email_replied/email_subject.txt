@@ -1,0 +1,1 @@
+{{ contact_name }} has replied to your {{ campaign_title }} campaign email

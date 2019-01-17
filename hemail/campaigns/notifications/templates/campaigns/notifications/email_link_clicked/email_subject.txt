@@ -1,0 +1,1 @@
+{{ contact_name }} has clicked {{ campaign_title }} campaign link

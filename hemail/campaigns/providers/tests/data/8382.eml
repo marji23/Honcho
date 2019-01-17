@@ -1,0 +1,290 @@
+Delivered-To: abrahas.23@gmail.com
+Received: by 10.80.196.75 with SMTP id w11csp2812161edf;
+        Sat, 9 Sep 2017 14:45:37 -0700 (PDT)
+X-Received: by 10.80.181.86 with SMTP id z22mr4881534edd.58.1504993537252;
+        Sat, 09 Sep 2017 14:45:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1504993537; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Zt7q/1ke8wvAuuLUTN0hrw1nFZ8bZfkBh0hDGIbidlWdVFkI/EowQ2mYQ+0XdpRm7V
+         MxCURiYvHTMWrQ/B0Jr7lJcyf6GMwtSauDAeoLAgKooEbXVkRv6JUIw8TRPbTp4yExj7
+         VWkQbzgkR2LJwfFbFShzKk4UwVeICdPC6G4yasH+ACTR2ZLSE02qJf/z2BSKvqqjIUEb
+         gUo25/JwpazC3idi+YEEKUcMfAcuYJbIuF7OaPW6x60QFlYplkBilvb+IwVr+dwy9szn
+         3ZIzisTzDcngexeVhCto0b8vNyMlxCLAIzWi1lXC1DiZwrU7zYcMcd57FJeGkmGHhO04
+         FQCQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:in-reply-to:references:subject:auto-submitted:to
+         :from:dkim-signature:arc-authentication-results;
+        bh=RooLhpMDFy3IOLfXK+stpYkSJpuVJ3ChU0taqrTQuGY=;
+        b=eJKLpiIAGfmgEFbRNyq23C73utsg5WYhX0RSuGTw+DdLvkURGp7bntUWyO2WlCbc8f
+         IKHZtQniMqYwEa4VLr4AmpDhDgF96Rat7u50kYNnRFhx35XL+4/JX2wVeKdsZ1CvKBGY
+         8k3Gd9fJF5tJ2JxPYa1BXqpKTf5rJIsc9qY+RPOwsYDzNYZaC/EsrqGBqaBNSQkTK/76
+         NrHLtz5FnVjGveZol7dMt0aQJq/eSUxJs/bYm67uFbiG4BZ2edIlBTx1F+3wUcvMm8g7
+         Z/eopGgm6oWPw9DEhM9UHcnjm+43eysv1v0Whm6k3PAYM1pyiLOkbG+D81jjOrXpm9qN
+         BxAg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@googlemail.com header.s=20161025 header.b=Fg6G5A4D;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) smtp.helo=mail-sor-f69.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com
+Return-Path: <>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id a11sor1934401edb.16.2017.09.09.14.45.36
+        for <abrahas.23@gmail.com>
+        (Google Transport Security);
+        Sat, 09 Sep 2017 14:45:37 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlemail.com header.s=20161025 header.b=Fg6G5A4D;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) smtp.helo=mail-sor-f69.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20161025;
+        h=from:to:auto-submitted:subject:references:in-reply-to:message-id
+         :date;
+        bh=RooLhpMDFy3IOLfXK+stpYkSJpuVJ3ChU0taqrTQuGY=;
+        b=Fg6G5A4DhIXBx/bzQQ/2jnWEK+ffDpmnzbc9bkdCSO9XsWO2JUtd9J8r1dhFRXNsxf
+         MMXb4X+tDEJnqJf0e2YDOmjOZg3Zs1Lb+jhGK9CdPq0fxIhKUVS2fZWPvLBqPbEUodZQ
+         8rKcBcdCN8l1fHWJnri6hR61MO6IDv6J5Bx1Z9w/jSsWWNeQACf0Zvjk2RPpCug1q7Cx
+         psRsIGklZjzy3lW2vw+Z5J0M0fDX+tQX5N2Q9uHoz6cEXvAfCcZ3ZP2NU+9jiuxbYu1c
+         TkasSuF4K7KTBET8JuQaXQ5Ja4CznWnIQpGLCTkLsJleJQxI3U7WhIgUbVnB3jIRTFLl
+         uQ+A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:to:auto-submitted:subject:references
+         :in-reply-to:message-id:date;
+        bh=RooLhpMDFy3IOLfXK+stpYkSJpuVJ3ChU0taqrTQuGY=;
+        b=rShx/rYAUt690tQkc7QmhX/4NzysoQgUfF+wg901ZtZYb4V13HzH7108pxDDcR88d+
+         matZGJxEgRyePZxkQavFv44VA1IinJWhB1xm2Bup/PN5Y+GCMr3zF9BZ6r32943z/xCJ
+         pH2scJQbxQH/DGUfsUScFfZD0VIFMyMF94xRi5/0PxGA5qP+dxxKXq/FNYEao+kafTxa
+         FCgcJYn3CaVru2nIQemT5Tsa+d3J8IX7b7C2+osuTi0Zaq8WM6bZSy+Kh384Gpwi0DFx
+         Q0sILDGEvH4emTb5ow5wCaIgjgn1FkNCbhjUA8xG4862Oxoc6MStttR9Wj03mxdlDooC
+         idkQ==
+X-Gm-Message-State: AHPjjUhNKhXuykrJQdZ/x7EuPPv445VhDlr+Xp2E884BYXRBpVfKltZ0
+	KmC5M/aQtjcr865Hnjka2OTlydFSYXpbvW84Uga8Tw==
+X-Google-Smtp-Source: ADKCNb7DmWeSa+aERlNxvncUn0JTYq4cq+CotnEr7U1fTTZGdK5R8EbPM42Q3hABSG27ZQN6YGux+WX35OEebcw6n9s9hNAiypqqA+k=
+X-Received: by 10.80.179.150 with SMTP id s22mr5632311edd.34.1504993536921;
+        Sat, 09 Sep 2017 14:45:36 -0700 (PDT)
+Content-Type: multipart/report; boundary="94eb2c0a52202844c30558c89dec"; report-type=delivery-status
+Return-Path: <>
+Received: by 10.80.179.150 with SMTP id s22mr5710215edd.34; Sat, 09 Sep 2017
+ 14:45:36 -0700 (PDT)
+From: Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+To: abrahas.23@gmail.com
+Auto-Submitted: auto-replied
+Subject: Delivery Status Notification (Failure)
+References: <CALCrHkB_+2OvjkjmR9CMRk1HZx+Hg-65vOqAXvHZ28e8_Qm=2Q@mail.gmail.com>
+In-Reply-To: <CALCrHkB_+2OvjkjmR9CMRk1HZx+Hg-65vOqAXvHZ28e8_Qm=2Q@mail.gmail.com>
+X-Failed-Recipients: handgretinger@med.uni-tuebingen.de
+Message-ID: <59b46100.96b3500a.47add.48aa.GMRIR@mx.google.com>
+Date: Sat, 09 Sep 2017 14:45:36 -0700 (PDT)
+
+--94eb2c0a52202844c30558c89dec
+Content-Type: multipart/related; boundary="94eb2c0a5220284c7c0558c89d00"
+
+--94eb2c0a5220284c7c0558c89d00
+Content-Type: multipart/alternative; boundary="94eb2c0a5220284c840558c89d01"
+
+--94eb2c0a5220284c840558c89d01
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+CioqINCQ0LTRgNC10YEg0L3QtSDQvdCw0LnQtNC10L0gKioKCtCh0L7QvtCx0YnQtdC90LjQtSDQ
+vdC1INC00L7RgdGC0LDQstC70LXQvdC+LCDRgtCw0Log0LrQsNC6INCw0LTRgNC10YEgaGFuZGdy
+ZXRpbmdlckBtZWQudW5pLXR1ZWJpbmdlbi5kZSDQvdC1INC90LDQudC00LXQvS4g0KPQtNCw0LvQ
+uNGC0LUg0L/RgNC+0LHQtdC70YssINC40YHQv9GA0LDQstGM0YLQtSDQvtC/0LXRh9Cw0YLQutC4
+INC4INC/0L7QstGC0L7RgNC40YLQtSDQv9C+0L/Ri9GC0LrRgy4KCgoK0J/QvtC70YPRh9C10L3Q
+vdGL0Lkg0L7RgtCy0LXRgjoKCjU1MCAjNS4xLjAgQWRkcmVzcyByZWplY3RlZC4K
+--94eb2c0a5220284c840558c89d01
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+CjxodG1sPgo8aGVhZD4KPHN0eWxlPgoqIHsKZm9udC1mYW1pbHk6Um9ib3RvLCAiSGVsdmV0aWNh
+IE5ldWUiLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmOwp9Cjwvc3R5bGU+CjwvaGVhZD4K
+PGJvZHk+Cjx0YWJsZSBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiIGNsYXNzPSJlbWFp
+bC13cmFwcGVyIiBzdHlsZT0icGFkZGluZy10b3A6MzJweDtiYWNrZ3JvdW5kLWNvbG9yOiNmZmZm
+ZmY7Ij48dGJvZHk+Cjx0cj48dGQ+Cjx0YWJsZSBjZWxscGFkZGluZz0wIGNlbGxzcGFjaW5nPTA+
+PHRib2R5Pgo8dHI+PHRkIHN0eWxlPSJtYXgtd2lkdGg6NTYwcHg7cGFkZGluZzoyNHB4IDI0cHgg
+MzJweDtiYWNrZ3JvdW5kLWNvbG9yOiNmYWZhZmE7Ym9yZGVyOjFweCBzb2xpZCAjZTBlMGUwO2Jv
+cmRlci1yYWRpdXM6MnB4Ij4KPGltZyBzdHlsZT0icGFkZGluZzowIDI0cHggMTZweCAwO2Zsb2F0
+OmxlZnQiIHdpZHRoPTcyIGhlaWdodD03MiBhbHQ9ItCX0L3QsNGH0L7QuiDQvtGI0LjQsdC60Lgi
+IHNyYz0iY2lkOmljb24ucG5nIj4KPHRhYmxlIHN0eWxlPSJtaW4td2lkdGg6MjcycHg7cGFkZGlu
+Zy10b3A6OHB4Ij48dGJvZHk+Cjx0cj48dGQ+PGgyIHN0eWxlPSJmb250LXNpemU6MjBweDtjb2xv
+cjojMjEyMTIxO2ZvbnQtd2VpZ2h0OmJvbGQ7bWFyZ2luOjAiPgrQkNC00YDQtdGBINC90LUg0L3Q
+sNC50LTQtdC9CjwvaDI+PC90ZD48L3RyPgo8dHI+PHRkIHN0eWxlPSJwYWRkaW5nLXRvcDoyMHB4
+O2NvbG9yOiM3NTc1NzU7Zm9udC1zaXplOjE2cHg7Zm9udC13ZWlnaHQ6bm9ybWFsO3RleHQtYWxp
+Z246bGVmdCI+CtCh0L7QvtCx0YnQtdC90LjQtSDQvdC1INC00L7RgdGC0LDQstC70LXQvdC+LCDR
+gtCw0Log0LrQsNC6INCw0LTRgNC10YEgPGEgc3R5bGU9J2NvbG9yOiMyMTIxMjE7dGV4dC1kZWNv
+cmF0aW9uOm5vbmUnPjxiPmhhbmRncmV0aW5nZXJAbWVkLnVuaS10dWViaW5nZW4uZGU8L2I+PC9h
+PiDQvdC1INC90LDQudC00LXQvS4g0KPQtNCw0LvQuNGC0LUg0L/RgNC+0LHQtdC70YssINC40YHQ
+v9GA0LDQstGM0YLQtSDQvtC/0LXRh9Cw0YLQutC4INC4INC/0L7QstGC0L7RgNC40YLQtSDQv9C+
+0L/Ri9GC0LrRgy4KPC90ZD48L3RyPgo8L3Rib2R5PjwvdGFibGU+CjwvdGQ+PC90cj4KPC90Ym9k
+eT48L3RhYmxlPgo8L3RkPjwvdHI+Cjx0ciBzdHlsZT0iYm9yZGVyOm5vbmU7YmFja2dyb3VuZC1j
+b2xvcjojZmZmO2ZvbnQtc2l6ZToxMi44cHg7d2lkdGg6OTAlIj4KPHRkIGFsaWduPSJsZWZ0IiBz
+dHlsZT0icGFkZGluZzo0OHB4IDEwcHgiPgrQn9C+0LvRg9GH0LXQvdC90YvQuSDQvtGC0LLQtdGC
+Ojxici8+CjxwIHN0eWxlPSJmb250LWZhbWlseTptb25vc3BhY2UiPgo1NTAgIzUuMS4wIEFkZHJl
+c3MgcmVqZWN0ZWQuCjwvcD4KPC90ZD4KPC90cj4KPC90Ym9keT48L3RhYmxlPgo8L2JvZHk+Cjwv
+aHRtbD4K
+--94eb2c0a5220284c840558c89d01--
+--94eb2c0a5220284c7c0558c89d00
+Content-Type: image/png; name="icon.png"
+Content-Disposition: attachment; filename="icon.png"
+Content-Transfer-Encoding: base64
+Content-ID: <icon.png>
+
+iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABTdJREFUeNrsnD9sFEcUh5+PRMqZ
+yA0SPhAUQAQFUkyTgiBASARo6QApqVIkfdxGFJFSgGhJAUIiBaQB0ZIOKVCkwUgURjIg2fxL4kS+
+YDvkbC/388bi8N16Z4/d7J/5PsniuD3fyePP772ZeTsDQRAYQL/UGAJAIEAgQCBAIAAEAgQCBAIE
+AkAgyJT3Mv+Eq7vYK8mTE+MDRCAghQECAeRQA5V2ZOpmg5vDx3NPzRbmGRMEcmTrEbNNB8zWfRD+
+f/Efs2e3zCZvMjaksBg27TfbcuSNPEKP9ZyuAQKtHX2O9ncNgWC57umMPKvRNb0GEKgnLoUyxTQC
+rcns0/6uIRAs8/hGf9cQCJZpTpjdO2f25/03z+mxntM1eLtsZAgiUtX4JcaBCAQIBAgECARQ8CJa
+G5jab4J4pm4WZmO3OALVh802fIwcLkyPkcKAGggAgQCBAIEAgQCBABAIEAjKA/1AnahhbO5FdOOY
+VsrrDbPBYcYKgf5D2wLaV3p+22xh1u17tO3S+DTcvxvagUDeivPgx/a/95J/73w7Sj26Hn4pKo2M
+ehuV/KyBJM6d0f7k6RKx/R63vvL2tmf/ItDdM2ZTP6f7nkp9Y2fDx1v9akmpIU+KSCLVUghUQfSL
+zVKeTklbLxGoctw/nzC5rw8L5KRNbkpnKq6pgSqEClzNnFzY+XnYWrt6VpVk1vbwWvg+RKCKMOUw
+Q1LEOXA+/MX3mpJvGDHb265xtnzmFoUK1HaKQGlMtePYM+q2KKjXuaS1NJYIEKgI8jhEgqHt4cqy
+Ky53j3hyHz2bqSLp2o2LbJ7MxKovkGqXteoWpaOk96O9/yF/dF7NwlS36AuIQIBA5celQK4PIxBE
+4LLzrtoLgaALdSy6CJRkWQCBPGLsTHznomZ9nszUECgJ2ml3WWHe+QVFNPSQx6UdZNtxr9pbEShN
+eTTz8mQXHoHSlke7+Z+c9m6VGoHSkEfs/trLW3wQKApN1V3lGfnGu2Z6BFoLtYCs3GWBPAiUCLVh
+/HoaeRCoT9R873KLM/IgUBfapnCpe5AHgXry4pf412ihEHkQqCdxd5VqrcezhUIESsJMTJ+Pdthp
+Z0WgyNlXXPHc2Mc4IVAELl2Gnh8mhUDvCkfbIVAkcbf/aOoO3fMKhqAD3frTa4quwpn0hUDOkQhI
+YYBAgECAQAAU0QlYObl+5Ug8NcprZkZxjUCxRPVA6zmtEXHCBykskrhjgHXN09PoEcgFl4M4H11j
+nBAoApcj6ZoPGScEAgTKApcDoTw5sgWB+sGlz1n90IBAPdE6j1o21PfcC11jLagL1oFWRyGlKU3p
+OxcSJQ7NZAjkhHp/uG2HFAYIBAgECASAQIBAgECAQAAIBOkxEARBtp9wdVfAMOfIifEBIhCQwgCB
+ABAI0oV2jhxZ+nfBatuPZfgBCy0Eqqo8c01b+uu51XZvzOgDWoHNTGR+pCwpLEd5svuAZXlO2uEr
+PyEQ8hRWHgRCHmqg0sjTnLalv6crJQ8C/U8stqNO0I4+VZOHFIY8COS1PGL2ybd5yUMKK7s8zYmL
+dujyd3n+nESgcsvzZd4/KwIhDwIhT35QA6UyE1qyxZnfvJMHgdKS549JC1qvvJOHFIY8CFR5eV5O
+XimqPAhUdHnmfx+zgxdOFXkoqIGKKs/cswnb/8Oeog8HEai48nxUhiFBIORBIOShBioskkbySCLk
+IQIhDwIhj28p7FApR6b1qlEbHGpkO/rr6215vi/zH1r2x7tApSGFAQIBAgECAQIBIBAgECAQIBBA
+LK8FGADCTxYrr+EVJgAAAABJRU5ErkJggg==
+--94eb2c0a5220284c7c0558c89d00--
+--94eb2c0a52202844c30558c89dec
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; googlemail.com
+Arrival-Date: Sat, 09 Sep 2017 14:45:34 -0700 (PDT)
+X-Original-Message-ID: <CALCrHkB_+2OvjkjmR9CMRk1HZx+Hg-65vOqAXvHZ28e8_Qm=2Q@mail.gmail.com>
+
+Final-Recipient: rfc822; handgretinger@med.uni-tuebingen.de
+Action: failed
+Status: 5.0.0
+Remote-MTA: dns; kuba2.zit.medizin.uni-tuebingen.de. (134.2.189.11, the server
+ for the domain med.uni-tuebingen.de.)
+Diagnostic-Code: smtp; 550 #5.1.0 Address rejected.
+Last-Attempt-Date: Sat, 09 Sep 2017 14:45:36 -0700 (PDT)
+
+--94eb2c0a52202844c30558c89dec
+Content-Type: message/rfc822
+
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=0qW8xgsna9doZHjBcU8i2rTifhUgqhBr68FOulQPCXA=;
+        b=bpCRTVtes6PB/04xeeJe6cEl8E7gVbIQ6H5W0khYkg924LsnFIWZPNI5qPZUSh1sj4
+         2dXCEhqjysWH9714CwmgqFCcHNse0DUrmbYYimXtlXuVplEougYOhzkEihJeWdNbXSCu
+         Jw63KR7O6Rp/IT/N/7z2JvR6O2exT5bIyz8KE160/EFTN7AA1lwUkjE3n9w1YmsCXIka
+         kMbKv55CQNScx+flQ8j7leiYDpqwkeQt5WQk1MkfawbRtG3OiVZPbRjVhq6qwv0SfbsO
+         dS7WvObYzn6/Ev6XZkf6WGXPYoxwNpNorQ9OlMjrAyqVW643dmnJe9VURPbPbT5n3D0v
+         PizQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=0qW8xgsna9doZHjBcU8i2rTifhUgqhBr68FOulQPCXA=;
+        b=fMb0VvVdgTmgSNwQw1O58l+Mz9pEKdpiIZlt0RYIPBZSwTqJU8nILjg/lMPhKydRVB
+         LE4EAtvm8tM/5ednScVJmaCOj+6FdiMm0iSpQcIJY+6wkCGvlkHMcfLgmbYCJNCnqDvc
+         kou4UiKHuba6VsHDMLDPFWXa4Z8oLDeO/WedVOveOBzUffab/O+NsxL1cz8+DacXYB+y
+         Xwb1fOgQYPvUnvSe2bZ9PQzfQ9t9Uzupx3FGDmfSBr3uOxH58mdBDC6v5U+DOgX3rgEX
+         wWaGjY68jFc2ukcnHXNuaHD+R36hC1bWqnjvtnxbLP6O9PABt5xxPxDdVSK+2OxL1yXH
+         /8ug==
+X-Gm-Message-State: AHPjjUjj9H9P204ug5OYLOj/dOnLq1BR7ERiaw+e5m50amA1r24kdI5C
+	zl9S30A7Uta6dVHcCNoaoK4AnsgmLNCbMxo=
+X-Google-Smtp-Source: ADKCNb4MjfWacJ0F8eOdgInA9Tex7fIme9RSvZbr1eRjSUJj8fADeHDV4Py4eLJfDvEY5ez8uh03oDEIr0OKuRh0ub8=
+X-Received: by 10.80.179.150 with SMTP id s22mr5632256edd.34.1504993534491;
+ Sat, 09 Sep 2017 14:45:34 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.80.160.231 with HTTP; Sat, 9 Sep 2017 14:45:32 -0700 (PDT)
+From: abrahas <abrahas.23@gmail.com>
+Date: Sun, 10 Sep 2017 00:45:32 +0300
+Message-ID: <CALCrHkB_+2OvjkjmR9CMRk1HZx+Hg-65vOqAXvHZ28e8_Qm=2Q@mail.gmail.com>
+Subject: Ksenia Mishaeva. Neuroblastoma Stage 4 relapse
+To: rupert.handgretinger@med.uni-tuebingen.de, 
+	handgretinger@med.uni-tuebingen.de, info@ic-tuebingen.de
+Content-Type: multipart/mixed; boundary="94eb2c0a522003ea290558c89ddd"
+
+--94eb2c0a522003ea290558c89ddd
+Content-Type: multipart/alternative; boundary="94eb2c0a522003ea250558c89ddb"
+
+--94eb2c0a522003ea250558c89ddb
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Prof. Dr. Rupert Handgretinger
+
+Ksenia Mishaeva is two years girl who has Neuroblastoma Stage 4 relapse.
+Doctors in Russia are not able to help her.
+We hope that you will be able to help her. Please, find the time to check
+her papers in attachments and make a decision if the treatment is possible.
+
+We are waiting of your decision. Ksenia's condition getting worse.
+
+Please give us a feedback when we can expect any answer. Or if we need to
+provide any additional information.
+
+-- 
+Regards,
+Pavel Yushkovskiy
+
+--94eb2c0a522003ea250558c89ddb
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"=
+gmail_quote"><div dir=3D"ltr"><div>Dear=C2=A0Prof. Dr.=C2=A0Rupert Handgret=
+inger</div><div><br></div><div>Ksenia Mishaeva is two years girl who has=C2=
+=A0<span style=3D"font-size:12.8px">Neuroblastoma=C2=A0Stage 4=C2=A0relapse=
+. Doctors in Russia are not able to help her.=C2=A0</span></div><div><span =
+style=3D"font-size:12.8px">We hope that you will be able to help her. Pleas=
+e, find the time to check her papers in attachments and make a decision if =
+the treatment=C2=A0is possible.</span><br></div><div><div><br></div><div><s=
+pan style=3D"font-size:12.8px">We are waiting of your decision. Ksenia&#39;=
+s condition getting worse.</span><br></div><div><br></div><div>Please give =
+us a feedback when we can expect any answer. Or if we need to provide any a=
+dditional information.</div><span class=3D"gmail-HOEnZb"><font color=3D"#88=
+8888"><span class=3D"gmail-m_863137303953027318gmail-HOEnZb"><font color=3D=
+"#888888"><div><br></div>-- <br><div class=3D"gmail-m_863137303953027318gma=
+il-m_-6009959095020256812gmail_signature">Regards,</div><div class=3D"gmail=
+-m_863137303953027318gmail-m_-6009959095020256812gmail_signature">Pavel Yus=
+hkovskiy</div>
+</font></span></font></span></div></div>
+</div><div><br></div></div></div>
+</div>
+
+--94eb2c0a522003ea250558c89ddb--
+--94eb2c0a522003ea290558c89ddd
+Content-Type: image/jpeg; name="3rd_line_of_chemytherapy.jpg"
+Content-Disposition: attachment; filename="3rd_line_of_chemytherapy.jpg"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_j7dr8h600
+
+/9j/4S/+RXhpZgAATU0AKgAAAAgACgEPAAIAAAAGAAAAhgEQAAIAAAAKAAAAjAESAAMAAAABAAYA
+AAEaAAUAAAABAAAAlgEbAAUAAAABAAAAngEoAAMAAAABAAIAAAExAAIAAAAGAAAApgEyAAIAAAAU
+AAAArAITAAMAAAABAAEAAIdpAAQAAAABAAAAwAAAA+xBcHBsZQBpUGhvbmUgNFMAAAAASAAAAAEA
+AABIAAAAATkuMy41ADIwMTc6MDg6MzAgMTM6MzY6MjkAACCCmgAFAAAAAQAAAkaCnQAFAAAAAQAA
+Ak6IIgADAAAAAQACAACIJwADAAAAAQBAAACQAAAHAAAABDAyMjGQAwACAAAAFAAAAlaQBAACAAAA
+FAAAAmqRAQAHAAAABAECAwCSAQAKAAAAAQAAAn6SAgAFAAAAAQAAAoaSAwAKAAAAAQAAAo6SBAAK
+AAAAAQAAApaSBwADAAAAAQAFAACSCQADAAAAAQAYAACSCgAFAAAAAQAAAp6SFAADAAAABAAAAqaS
+fAAHAAAA9AAAAq6SkQACAAAABDUzNgCSkgACAAAABDUzNgCgAAAHAAAABDAxMDCgAQADAAAAAQAB
+AACgAgAEAAAAAQAADMCgAwAEAAAAAQAACZCiFwADAAAAAQACAACjAQAHAAAAAQEAAACkAgADAAAA
+AQAAAACkAwADAAAAAQAAAACkBQADAAAAAQAjAACkBgADAAAAAQAAAACkMgAFAAAABAAAA6KkMwAC
+AAAABgAAA8KkNAACAAAAIwAAA8gAAAAAAAAAAQAAADwAAAAMAAAABTIwMTc6MDg6MzAgMTM6MzY6
+MjkAMjAxNzowODozMCAxMzozNjoyOQAAABKZAAADJgAAEu0AAAd+AAALbwAAAkcAAAAAAAAAAQAA
+AGsAAAAZBl8ExwNxA3FBcHBsZSBpT1MAAAFNTQAIAAEACQAAAAEAAAAEAAMABwAAAGgAAAB0AAQA
+CQAAAAEAAAABAAUACQAAAAEAAAD3AAYACQAAAAEAAAD/AAcACQAAAAEAAAABAAgACgAAAAMAAADc
+ABQACQAAAAEAAAABAAAAAGJwbGlzdDAw1AECAwQFBgcIWXRpbWVzY2FsZVV2YWx1ZVVlcG9jaFVm
+bGFncxI7msoAEwAAe/khchXwEAAQAQgRGyEnLTI7PQAAAAAAAAEBAAAAAAAAAAkAAAAAAAAAAAAA
+AAAAAAA////9oQAAp6IAAA88AAHLnf//8CAAAA+FAAAAawAAABkAAABrAAAAGQAAAAwAAAAFAAAA
+DAAAAAVBcHBsZQBpUGhvbmUgNFMgYmFjayBjYW1lcmEgNC4yOG1tIGYvMi40AAAABgEDAAMAAAAB
+AAYAAAEaAAUAAAABAAAEOgEbAAUAAAABAAAEQgEoAAMAAAABAAIAAAIBAAQAAAABAAAESgICAAQA
+AAABAAAb6QAAAAAAAABIAAAAAQAAAEgAAAAB/9j/2wCEAAEBAQEBAQIBAQIDAgICAwQDAwMDBAUE
+BAQEBAUGBQUFBQUFBgYGBgYGBgYHBwcHBwcICAgICAkJCQkJCQkJCQkBAQEBAgICBAICBAkGB
+----- Message truncated -----
+
+--94eb2c0a52202844c30558c89dec--

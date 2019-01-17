@@ -1,0 +1,8 @@
+{% load account %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+
+<a href="{{ contact_link }}">{{ contact_name }}</a> from {{ company_name }} has <strong>clicked link</strong> from you <a href="{{ campaign_link }}">{{ campaign_title }}<a/> campaign email.
+Contact's phone number <phone>{{ phone_number }}</phone>
+
+{% endblocktrans %}{% endautoescape %}
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you from {{ site_name }}!
+{{ site_domain }}{% endblocktrans %}

@@ -1,0 +1,18 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block usertools %}
+  {% if tenancy_form %}
+    <div class="dashboard-tools">
+      <form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post"
+            id="add-dashboard-module-form">
+        {% csrf_token %}
+        {{ tenancy_form.active_tenant }}
+      </form>
+    </div>
+  {% endif %}
+
+
+  {{ block.super }}
+{% endblock %}
+

@@ -1,0 +1,14 @@
+-r base.txt
+
+tox
+flake8
+coverage
+
+pex
+wheel
+
+flower
+
+websockets
+
+#uwsgi==2.0.14

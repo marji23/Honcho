@@ -1,0 +1,579 @@
+Delivered-To: abrahas.23@gmail.com
+Received: by 10.80.139.202 with SMTP id n10csp1732658edn;
+        Wed, 21 Feb 2018 22:24:36 -0800 (PST)
+X-Google-Smtp-Source: AH8x224za8AQ95tmwNsxz8l4xxPOmkzre8UUUKtCMU703nhCFGx03NhEcTHE5NPbThl3bL4RG0ns
+X-Received: by 10.25.163.85 with SMTP id m82mr4104918lfe.54.1519280676242;
+        Wed, 21 Feb 2018 22:24:36 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1519280676; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Iq4Mm0nccYmOMR0+0jeXcEFRvYN2TTIcd0xUAZoWYjzntjHk5fWwEVOvcwPkUogI2c
+         y0coDEWYZW1YqE4CzaumzstRcjJFq+qfgdkJH7z6XvcFPevCuGAl4DTzUDbTm3iVIYUQ
+         RAsPO8bxGssW3RTBy4lX7nIDYw44L56JmI5faXXsTjN88eDsusVF8UlFeOSZxiFLO1iU
+         F8v++1lkuMoMHsQuKBcDWX6TVuShG6Hw7gc39QUSTpmmrBxpETfM1ljc3eAz6Gpx4XxW
+         7URDn2ImxV8O9B66Y1lGBBZa2A2r1kiH3rkqZI9t4R4ass/6xFoYyqUUCM0xmZSvZfhT
+         JRTw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:feedback-id:subject:to:from:reply-to:message-id:date
+         :list-post:list-archive:list-subscribe:list-unsubscribe:list-issue
+         :list-id:precedence:dkim-signature:dkim-signature
+         :arc-authentication-results;
+        bh=oCD/Ynq7ABkHcXfJqgG15RPNVqorq1jNoa0eJRi+zW8=;
+        b=ZlWG/2dkPtT2a0oWLT3PlO9xfSrMwEm96rJcc/zg6+T5F2wQnHDPmDsHYk1iXizksi
+         NfHdec8/HsRlmQvcVu99joFUWz+nWKClXxM33JNBUMEAO/F9Mmk3yopYH1+cMGHrdcnc
+         mYu+2dEXCmgtkTIlP/Pvk+xQ8HeHl0daH4Q9llrxP1sXvxJ/vthxBJEdrx48EfdTsHbo
+         VxXvpW8evw4uACvxreHaKX6JMzYphFfarrUkYc79LPE/VZuAxD3Z9bWLSHTOeKVMdp0O
+         qDndy0kSiWe5pceeS9Eq8ZeD0c/brC/C8oMSUmJJ7kuqQFiZbUGhxV+luaXviUJlUdBy
+         ieGA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.sendsay.ru header.s=sendsay201706 header.b=CMU7vsqa;
+       dkim=pass header.i=@online.rgs.ru header.s=rgsru.148 header.b=UvWW19pT;
+       spf=pass (google.com: domain of newsletter@online.rgs.ru designates 185.138.183.97 as permitted sender) smtp.mailfrom=newsletter@online.rgs.ru;
+       dmarc=pass (p=REJECT sp=NONE dis=NONE) header.from=rgs.ru
+Return-Path: <newsletter@online.rgs.ru>
+Received: from macka97.sndsy.ru (macka97.sndsy.ru. [185.138.183.97])
+        by mx.google.com with ESMTPS id g7si10284064lfe.420.2018.02.21.22.24.35
+        for <abrahas.23@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 21 Feb 2018 22:24:36 -0800 (PST)
+Received-SPF: pass (google.com: domain of newsletter@online.rgs.ru designates 185.138.183.97 as permitted sender) client-ip=185.138.183.97;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.sendsay.ru header.s=sendsay201706 header.b=CMU7vsqa;
+       dkim=pass header.i=@online.rgs.ru header.s=rgsru.148 header.b=UvWW19pT;
+       spf=pass (google.com: domain of newsletter@online.rgs.ru designates 185.138.183.97 as permitted sender) smtp.mailfrom=newsletter@online.rgs.ru;
+       dmarc=pass (p=REJECT sp=NONE dis=NONE) header.from=rgs.ru
+Received: id BA5936B719-1519280649
+Return-Path: <newsletter@online.rgs.ru>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.sendsay.ru; s=sendsay201706;
+	t=1519280649; bh=oCD/Ynq7ABkHcXfJqgG15RPNVqorq1jNoa0eJRi+zW8=;
+	h=Precedence:List-Id:List-Issue:List-Unsubscribe:List-Subscribe:
+	 List-Archive:List-Post:X-Felis-L:X-rpcampaign:Date:Message-Id:
+	 Reply-To:From:To:Subject:X-Mailru-Msgtype:Feedback-Id:MIME-Version:
+	 Content-Type;
+	b=CMU7vsqa4TIwM+PJaYoX3/zkVJy5izNHnmsq8v2IyptXrDBFirEUxHs97pMR83BFz
+	 U8YYdTNmC9jqpUTV6GqsYUiIXU9RbIdm08k35wYg0YFXPo4r+EI/AApyO1w5u+QzXf
+	 x21x2PnbotG6cKNkWjK1TN/fu3lZ2bSRxmrrWBZA=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=online.rgs.ru; s=rgsru.148;
+	t=1519280649; bh=oCD/Ynq7ABkHcXfJqgG15RPNVqorq1jNoa0eJRi+zW8=;
+	h=Precedence:List-Id:List-Issue:List-Unsubscribe:List-Subscribe:
+	 List-Archive:List-Post:X-Felis-L:X-rpcampaign:Date:Message-Id:
+	 Reply-To:From:To:Subject:X-Mailru-Msgtype:Feedback-Id:MIME-Version:
+	 Content-Type;
+	b=UvWW19pTbiJYpd+hPSeyx48Gq727p2bbqtjCIx+XKojxv+px1jOteDAkAVqxU0qDe
+	 cu5R26ytLulHktBIcVhV2mL+yZM5Ow0XDmvYZ/qQmNBQvOy7NofLsxxe3v8fCRFTDP
+	 gIQtZV5nHWDVMGPECo57KxcuAaparXCC3LWKSTG4=
+Precedence: bulk
+List-Id: <22-02-2018>
+List-Issue: <20180222090614.p548.rgsru>
+List-Unsubscribe: <mailto:fbl@online.rgs.ru?subject=fbl,rgsru,7025,16327670,1352641/20180222090614,p548>
+List-Subscribe: NO
+List-Archive:  NO
+List-Post: NO
+X-Felis-L: 7025.16327670.1352641.p548.rgsru
+X-rpcampaign: rgsrup54820180222090614
+Date: Thu, 22 Feb 2018 09:24:09 +0300
+Message-Id: <20180222090614.0.20180222090614_eui_@7025.16327670.1352641.p548.rgsru>
+Reply-To:  <newsletter@rgs.ru>
+From: =?utf-8?Q?=D0=A0=D0=9E=D0=A1=D0=93=D0=9E=D0=A1=D0=A1=D0=A2=D0=A0=D0=90=D0=A5?= <digital@rgs.ru>
+To:  <abrahas.23@gmail.com>
+Subject: =?utf-8?Q?=D0=92=D0=BF=D0=B5=D1=80=D0=B5=D0=B4=D0=B8=20?=
+ =?utf-8?Q?3=20?=
+ =?utf-8?Q?=D0=B2=D1=8B=D1=85=D0=BE=D0=B4=D0=BD=D1=8B=D1=85=C2=A0=E2=80=94=20?=
+ =?utf-8?Q?=D1=85=D0=B2=D0=B0=D1=82=D0=B0=D0=B9=20?=
+ =?utf-8?Q?=D1=81=D0=BA=D0=B8=D0=B4=D0=BA=D1=83=20?=
+ =?utf-8?Q?23=25=20?=
+ =?utf-8?Q?=D0=B4=D0=BB=D1=8F=20?=
+ =?utf-8?Q?=D0=BD=D0=B5=D0=B7=D0=B0=D0=B1=D1=8B=D0=B2=D0=B0=D0=B5=D0=BC=D1=8B=D1=85=20?=
+ =?utf-8?Q?=D0=BF=D1=83=D1=82=D0=B5=D1=88=D0=B5=D1=81=D1=82=D0=B2=D0=B8=D0=B9=21?=
+X-Mailru-Msgtype: 22-02-2018
+Feedback-Id: rgsru7025:rgsru:p548:sendsay
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+  boundary="=felis-alternative=20180222092359=181252"
+
+
+
+--=felis-alternative=20180222092359=181252
+Content-Type: text/plain;
+  charset="utf-8"
+
+Впереди длинные выходные — самое время
+устроить экспресс-путешествие!
+В честь праздника дарим потрясающую
+скидку 23% на страхование путешествий за
+рубеж и по России. Спешите —
+супервыгодная скидка действует только
+сегодня, а застраховаться вы можете хоть
+на целый год вперед!
+Например, минимальная стоимость
+страховки в Шенген на 3 дня со скидкой —
+всего 179,38 Р*
+---------------------------------------------------
+Едем за рубеж! от 179,38 Р
+https://www.rgs.ru/products/private_person/tour/strahovanie_turistov/calc/index.wbp?utm_source=VZR_23february_mailing_22022018&utm_medium=email&utm_campaign=23february_mailing_22022018&promo=FEB23
+---------------------------------------------------
+Едем по России! от 52,36 Р
+https://www.rgs.ru/products/private_person/tour/rutravel/calc/index.wbp?utm_source=RF_23february_mailing_22022018&utm_medium=email&utm_campaign=23february_mailing_22022018&promo=FEB23
+---------------------------------------------------
+Промо-код применяется автоматически при
+переходе в калькулятор по ссылке только
+из данного письма. При выборе программы
+страхования на 2 шаге расчета вы увидите
+изменение цены.
+* Указанный расчет действителен для
+поездки в Шенген с 23 по 25 февраля 2018,
+программа «Эконом», 1 застрахованный,
+применена скидка 23% в рамках промо-акции
+FEB23. Скидка применяется ко всем рискам.
+Расчет действителен на момент создания
+рассылки. Акция действует с 15 по 22 февраля
+2018 включительно только на сайте ПАО СК
+«Росгосстрах»
+-------------------------------------
+Мы Вконтакте — https://vk.com/rosgosstrakh_official
+Группа в Facebook — https://www.facebook.com/RGS.ru
+Канал Youtube — http://www.youtube.com/user/Rosgosstrakh
+-------------------------------------
+МОБИЛЬНОЕ ПРИЛОЖЕНИЕ «РОСГОССТРАХ»
+AppStore —
+https://itunes.apple.com/ru/app/rosgosstrah/id1171370470?ls=1&mt=8
+Google Play —
+https://play.google.com/store/apps/details?id=ru.rgs.insurance
+-------------------------------------
+www.RGS.ru • ПАО СК «Росгосстрах», лицензии
+Банка России на осуществление
+страхования СИ № 0001, СЛ № 0001, ОС № 0001-02, ОС
+№ 0001-03, ОС № 0001-04, ОС № 0001-05 и на
+осуществление перестрахования ПС № 0001,
+выданы 23.05.2016, бессрочные. Реклама, не
+является офертой. Для расчета обратитесь
+на сайт компании www.RGS.ru или в офис ПАО СК
+«Росгосстрах» https://www.rgs.ru/contacts/list.wbp • Вы
+получили это письмо, потому что
+подписались на рассылку при оформлении
+страхового продукта в ПАО СК
+«Росгосстрах». Отписаться от рассылки:
+https://sendsay.ru/backend/member/unsub/1Qk-ej48YOb4xYI9sfrsTIaImtRUgscMQVgy6_uE7tjCHf1gF6NPoXXqF937Nx0nvX-QInI8YEHLdz8IbDfLXgtnsaQ
+
+
+--=felis-alternative=20180222092359=181252
+Content-Type: text/html;
+  charset="utf-8"
+
+<!-- text_pro_editor --><!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    @media screen and (max-width:480px) {
+        .banner-cta, img, .text {
+            font-size:13px !important;
+        }
+
+    }
+
+    @media screen and (min-width:440px) {
+        .adaptive-block.equal {
+        width:50% !important;
+        }
+
+    }
+
+    @media screen and (min-width:500px) {
+        .adaptive-block.cross {
+        width:50% !important;
+        }
+    }
+    </style>
+</head>
+<body class="body" style="padding: 0;margin: 0;">
+
+<!--[if (gte mso 9)|(IE)]>
+	<style type="text/css">
+		table {
+		mso-table-lspace:0pt;
+		mso-table-rspace:0pt;
+		}
+
+		img {
+		-ms-interpolation-mode:bicubic;
+		}
+
+		.text, .hor {
+		mso-line-height-rule: exactly;
+		}
+
+	</style>
+<![endif]-->
+<!--[if !mso]><!-->
+<div class="preheader" style="padding: 0;margin: 0;display: none;font-size: 1px;line-height: 1px;color: #353535;">
+	Скидка -23% на страхование путешествий за рубеж и по России только сегодня! Успейте выгодно застраховаться и путешествуйте с удовольствием!
+</div>
+<!--<![endif]-->
+<!--background-->
+<table class="body-bg" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;border-top: 5px solid #9e0918;background-color: #fafafa;">
+	<tr style="padding: 0;margin: 0;">
+      	<!--Top-border-brand-->
+      	<td style="padding: 0;margin: 0;">
+          <!--[if (gte mso 9)|(IE)]>
+          <table width="800" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td>
+          <![endif]-->
+          <!--Responsive-800-wrapper-->
+          <div class="wrapper" style="padding: 0;margin: 0 auto;max-width: 800px;display: block;">
+				<!--Main-->
+            	<table class="main-bg" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;background-color: #ffffff;">
+					<tr style="padding: 0;margin: 0;">
+						<td style="padding: 0;margin: 0;">
+							<!--Шапка-->
+							<table class="heading" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+								<!--Top-banner-->
+								<tr style="padding: 0;margin: 0;">
+									<td colspan="2" class="banner-bg" style="padding: 0;margin: 0;line-height: 0;">
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+											<tr style="padding: 0;margin: 0;">
+												<td style="padding: 0;margin: 0;">
+													<a
+href="http://rgsru.link.sendsay.ru/rgsru/92810,PqTb9E0yVrho53iMoHnSnA/7025,16327670,1352641,?aHR0cHM6Ly93d3cucmdzLnJ1L3Byb2R1Y3RzL3ByaXZhdGVfcGVyc29uL3RvdXIvc3RyYWhvdmFuaWVfdHVyaXN0b3YvY2FsYy9pbmRleC53YnA/dXRtX3NvdXJjZT1WWlJfMjNmZWJydWFyeV9tYWlsaW5nXzIyMDIyMDE4JnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTIzZmVicnVhcnlfbWFpbGluZ18yMjAyMjAxOCZwcm9tbz1GRUIyMw=="
+ x-orig-uri="https://www.rgs.ru/products/private_person/tour/strahovanie_turistov/calc/index.wbp?utm_source=VZR_23february_mailing_22022018&utm_medium=email&utm_campaign=23february_mailing_22022018&promo=FEB23"
+ data-felis_link_id="92810" style="display: inline-block;text-decoration: none;">
+														<img class="banner-img" src="https://www.rgs.ru/upload/medialibrary/150/3690141.jpg" alt="Не проспи все выходные!" width="800" style="padding: 0;margin: 0;width: 100%;display: inline-block;font-family: Arial,sans-serif;font-size: 16px;color: #353535;height:
+auto;max-width: 800px;">
+													</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!--Horizontal-space-40-->
+								<tr style="padding: 0;margin: 0;">
+								  <td class="hor hor40" align="center" style="padding: 0;margin: 0;line-height: 0;height: 40px;"></td>
+								</tr>
+							</table>
+							<!--Content-->
+							<table class="section" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+								<tr style="padding: 0;margin: 0;">
+									<td class="v-padding" style="padding: 0;margin: 0;width: 5%;"></td>
+									<td class="content" style="padding: 0;margin: 0;">
+										<table cellpadding="0" cellspacing="0" border="0" width="100%" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+											<tr style="padding: 0;margin: 0;">
+												<td class="text" style="padding: 0;margin: 0;vertical-align: top;font-family: Arial,sans-serif;font-size: 16px;font-size-adjust: none;-webkit-font-size-adjust: none;line-height: 1.4;letter-spacing: 0.02em;color: #353535;word-break: normal;hyphens: none;-webkit-hyphens: none;">
+												Впереди длинные выходные&nbsp;— самое время устроить экспресс-путешествие!<br><br> В&nbsp;честь праздника <b>дарим потрясающую скидку 23%</b> на&nbsp;страхование
+путешествий за&nbsp;рубеж и по&nbsp;России. Спешите&nbsp;— супервыгодная скидка действует <b>только сегодня</b>, а застраховаться вы
+можете хоть на целый год вперед!
+
+												</td>
+											</tr>
+											<!--Horizontal-space-20-->
+											<tr style="padding: 0;margin: 0;">
+											  <td class="hor hor20" align="center" style="padding: 0;margin: 0;line-height: 0;height: 20px;"></td>
+											</tr>
+											<tr style="padding: 0;margin: 0;">
+												<td class="text" style="padding: 0;margin: 0;vertical-align: top;font-family: Arial,sans-serif;font-size: 16px;font-size-adjust: none;-webkit-font-size-adjust: none;line-height: 1.4;letter-spacing: 0.02em;color: #353535;word-break: normal;hyphens: none;-webkit-hyphens: none;">
+												Например, минимальная стоимость страховки в Шенген на 3 дня со скидкой&nbsp;— всего 179,38&nbsp;Р*
+												</td>
+											</tr>
+											<!--Horizontal-space-40-->
+											<tr style="padding: 0;margin: 0;">
+											  <td class="hor hor40" align="center" style="padding: 0;margin: 0;line-height: 0;height: 40px;"></td>
+											</tr>
+											<!--ADAPTIVE BLOCKS-->
+											<tr style="padding: 0;margin: 0;">
+											  <td style="padding: 0;margin: 0;">
+												<table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+													<tr style="padding: 0;margin: 0;">
+														<td align="center" class="text-center" style="padding: 0;margin: 0;text-align: center;">
+															<div class="adaptive-wrapper" style="padding: 0;margin: 0;display: inline-block;vertical-align: top;width: 100%;font-size: 0;max-width: 720px;">
+															<!--[if gte mso 9]>
+																<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td valign="top" width="50%">
+															<![endif]-->
+																  <div class="adaptive-block equal" style="padding: 0;margin: 0;display: inline-block;vertical-align: top;width: 100%;max-width: 360px;">
+																	<table cellpadding="0" cellspacing="0" width="100%" border="0" align="center" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+																		<tr style="padding: 0;margin: 0;">
+																			<td class="cta-side-space" style="padding: 0;margin: 0;width: 2%;"></td>
+																			<!--Coloured Btn-->
+																			<td class="cta cta-btn" style="padding: 0;margin: 0;text-align: center;vertical-align: middle;background-color: #9e0918;width: 96%;">
+																				<table cellpadding="0" cellspacing="0" width="100%" border="0" align="center" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+																					<!--Horizontal-space-20-->
+																					<tr style="padding: 0;margin: 0;">
+																					  <td colspan="3" class="hor hor20" align="center" style="padding: 0;margin: 0;line-height: 0;height: 20px;"></td>
+																					</tr>
+																					<tr style="padding: 0;margin: 0;">
+																						<td class="v-padding" style="padding: 0;margin: 0;width: 5%;"></td>
+																						<td class="text text-center" style="padding: 0;margin: 0;vertical-align: top;font-family: Arial,sans-serif;font-size: 16px;font-size-adjust: none;-webkit-font-size-adjust: none;line-height: 1.4;letter-spacing: 0.02em;color: #353535;word-break: normal;hyphens:
+none;-webkit-hyphens: none;text-align: center;">
+																							<a
+href="http://rgsru.link.sendsay.ru/rgsru/92811,PqTb9E0yVrho53iMoHnSnA/7025,16327670,1352641,?aHR0cHM6Ly93d3cucmdzLnJ1L3Byb2R1Y3RzL3ByaXZhdGVfcGVyc29uL3RvdXIvc3RyYWhvdmFuaWVfdHVyaXN0b3YvY2FsYy9pbmRleC53YnA/dXRtX3NvdXJjZT1WWlJfMjNmZWJydWFyeV9tYWlsaW5nXzIyMDIyMDE4JnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPTIzZmVicnVhcnlfbWFpbGluZ18yMjAyMjAxOCZwcm9tbz1GRUIyMw=="
+ x-orig-uri="https://www.rgs.ru/products/private_person/tour/strahovanie_turistov/calc/index.wbp?utm_source=VZR_23february_mailing_22022018&utm_medium=email&utm_campaign=23february_mailing_22022018&promo=FEB23"
+ data-felis_link_id="92811" style="display: inline-block;text-decoration: none;"><span class="white" style="color: #ffffff;font-size: 20px;">Едем за&nbsp;рубеж!<br>от 179,38&nbsp;Р</span></a>
+																							</td>
+																						<td class="v-padding" style="padding: 0;margin: 0;width: 5%;"></td>
+																					</tr>
+																					<!--Horizontal-space-20-->
+																					<tr style="padding: 0;margin: 0;">
+																					  <td colspan="3" class="hor hor20" align="center" style="padding: 0;margin: 0;line-height: 0;height: 20px;"></td>
+																					</tr>
+																				</table>
+																			</td>
+																			<td class="cta-side-space" style="padding: 0;margin: 0;width: 2%;"></td>
+																		</tr>
+																		<!--Horizontal-space-10-->
+																		<tr style="padding: 0;margin: 0;">
+																		  <td class="hor hor10" colspan="3" align="center" style="padding: 0;margin: 0;line-height: 0;height: 10px;"></td>
+																		</tr>
+																	</table>
+																</div>
+															  <!--[if gte mso 9]>
+																	</td>
+																	<td valign="top" width="50%">
+															  <![endif]-->
+																  <div class="adaptive-block equal" style="padding: 0;margin: 0;display: inline-block;vertical-align: top;width: 100%;max-width: 360px;">
+																	<table cellpadding="0" cellspacing="0" width="100%" border="0" align="center" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+																		<tr style="padding: 0;margin: 0;">
+																			<td class="cta-side-space" style="padding: 0;margin: 0;width: 2%;"></td>
+																			<!--Coloured Btn-->
+																			<td class="cta cta-btn" style="padding: 0;margin: 0;text-align: center;vertical-align: middle;background-color: #9e0918;width: 96%;">
+																				<table cellpadding="0" cellspacing="0" width="100%" border="0" align="center" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+																					<!--Horizontal-space-20-->
+																					<tr style="padding: 0;margin: 0;">
+																					  <td colspan="3" class="hor hor20" align="center" style="padding: 0;margin: 0;line-height: 0;height: 20px;"></td>
+																					</tr>
+																					<tr style="padding: 0;margin: 0;">
+																						<td class="v-padding" style="padding: 0;margin: 0;width: 5%;"></td>
+																						<td class="text text-center" style="padding: 0;margin: 0;vertical-align: top;font-family: Arial,sans-serif;font-size: 16px;font-size-adjust: none;-webkit-font-size-adjust: none;line-height: 1.4;letter-spacing: 0.02em;color: #353535;word-break: normal;hyphens:
+none;-webkit-hyphens: none;text-align: center;">
+																							<a
+href="http://rgsru.link.sendsay.ru/rgsru/92812,2SPXhyo2Ik9aeiW9NXmrxA/7025,16327670,1352641,?aHR0cHM6Ly93d3cucmdzLnJ1L3Byb2R1Y3RzL3ByaXZhdGVfcGVyc29uL3RvdXIvcnV0cmF2ZWwvY2FsYy9pbmRleC53YnA/dXRtX3NvdXJjZT1SRl8yM2ZlYnJ1YXJ5X21haWxpbmdfMjIwMjIwMTgmdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249MjNmZWJydWFyeV9tYWlsaW5nXzIyMDIyMDE4JnByb21vPUZFQjIz"
+ x-orig-uri="https://www.rgs.ru/products/private_person/tour/rutravel/calc/index.wbp?utm_source=RF_23february_mailing_22022018&utm_medium=email&utm_campaign=23february_mailing_22022018&promo=FEB23"
+ data-felis_link_id="92812" style="display: inline-block;text-decoration: none;"><span class="white" style="color: #ffffff;font-size: 20px;">Едем по&nbsp;России!<br>от 52,36&nbsp;Р</span></a>
+																							</td>
+																						<td class="v-padding" style="padding: 0;margin: 0;width: 5%;"></td>
+																					</tr>
+																					<!--Horizontal-space-20-->
+																					<tr style="padding: 0;margin: 0;">
+																					  <td colspan="3" class="hor hor20" align="center" style="padding: 0;margin: 0;line-height: 0;height: 20px;"></td>
+																					</tr>
+																				</table>
+																			</td>
+																			<td class="cta-side-space" style="padding: 0;margin: 0;width: 2%;"></td>
+																		</tr>
+																		<!--Horizontal-space-10-->
+																		<tr style="padding: 0;margin: 0;">
+																		  <td class="hor hor10" colspan="3" align="center" style="padding: 0;margin: 0;line-height: 0;height: 10px;"></td>
+																		</tr>
+																	</table>
+
+																</div>
+															  <!--[if gte mso 9]>
+																	</td>
+																	</tr>
+																</table>
+															  <![endif]-->
+															</div>
+														</td>
+													</tr>
+												</table>
+											  </td>
+											</tr>
+											<!--Horizontal-space-40-->
+											<tr style="padding: 0;margin: 0;">
+											  <td class="hor hor40" align="center" style="padding: 0;margin: 0;line-height: 0;height: 40px;"></td>
+											</tr>
+											<tr style="padding: 0;margin: 0;">
+												<td class="text" style="padding: 0;margin: 0;vertical-align: top;font-family: Arial,sans-serif;font-size: 16px;font-size-adjust: none;-webkit-font-size-adjust: none;line-height: 1.4;letter-spacing: 0.02em;color: #353535;word-break: normal;hyphens: none;-webkit-hyphens: none;">
+													Промо-код применяется автоматически при переходе в&nbsp;калькулятор по&nbsp;ссылке только из&nbsp;данного письма. При&nbsp;выборе программы страхования на 2 шаге
+расчета вы увидите изменение цены.
+												</td>
+											</tr>
+											<tr style="padding: 0;margin: 0;">
+											  <td class="hor hor40" align="center" style="padding: 0;margin: 0;line-height: 0;height: 40px;"></td>
+											</tr>
+
+										</table>
+									</td><!--Content-->
+									<td class="v-padding" style="padding: 0;margin: 0;width: 5%;"></td>
+								</tr>
+
+							</table>
+						</td>
+					</tr>
+				</table><!--Main-->
+				<!-- footer -->
+				<table cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+					<tr style="padding: 0;margin: 0;">
+						<td class="hor hor20" style="padding: 0;margin: 0;line-height: 0;height: 20px;"></td>
+					</tr>
+					<tr style="padding: 0;margin: 0;">
+						<td class="text text-footer" style="padding: 0;margin: 0;vertical-align: top;font-family: Arial,sans-serif;font-size: 14px;font-size-adjust: none;-webkit-font-size-adjust: none;line-height: 1.4;letter-spacing: 0.02em;color: #353535;word-break: normal;hyphens: none;-webkit-hyphens: none;">
+							* Указанный расчет действителен для поездки в Шенген с 23 по 25 февраля 2018, программа «Эконом», 1&nbsp;застрахованный, применена скидка 23% в рамках промо-акции FEB23.
+Скидка применяется ко всем рискам. Расчет действителен на момент создания рассылки. Акция действует с 15 по 22 февраля 2018
+включительно только на сайте ПАО СК «Росгосстрах» <a
+href="http://rgsru.link.sendsay.ru/rgsru/92813,66w9pKvKDY9uKZsyoRLGjw/7025,16327670,1352641,?aHR0cHM6Ly93d3cucmdzLnJ1Lw=="
+ x-orig-uri="https://www.rgs.ru/"
+ data-felis_link_id="92813" style="display: inline-block;text-decoration: none;"><span style="color: #353535;text-decoration: underline;">www.RGS.ru</span></a>.
+						</td>
+					</tr>
+					<tr style="padding: 0;margin: 0;">
+						<td class="hor hor20" style="padding: 0;margin: 0;line-height: 0;height: 20px;"></td>
+					</tr>
+					<!--SMM-->
+					<tr style="padding: 0;margin: 0;">
+						<td style="padding: 0;margin: 0;">
+							<table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+								<tr style="padding: 0;margin: 0;">
+									<td class="v-padding" style="padding: 0;margin: 0;width: 5%;"></td>
+									<td style="padding: 0;margin: 0;">
+										<table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+											<tr style="padding: 0;margin: 0;">
+												<td class="text-center" style="padding: 0;margin: 0;text-align: center;">
+													<div class="adaptive-wrapper" style="padding: 0;margin: 0;display: inline-block;vertical-align: top;width: 100%;font-size: 0;max-width: 720px;">
+													<!--[if gte mso 9]>
+														<table width="100%" border="0" cellspacing="0" cellpadding="0">
+															<tr>
+																<td valign="top" width="50%">
+													<![endif]-->
+														<div class="adaptive-block equal-footer" style="padding: 0;margin: 0;display: inline-block;vertical-align: top;width: 100%;max-width: 280px;">
+															<table class="smm-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+															   <tr style="padding: 0;margin: 0;">
+																	<td style="padding: 0;margin: 0;height: 70px;vertical-align: middle;text-align: center;">
+																		<div class="img-wrapper smm-icon" style="padding: 0;margin: 0;display: inline-block;width: 48px;">
+																		<a
+href="http://rgsru.link.sendsay.ru/rgsru/92814,s-1gCLkaniqM_XX4rgH9Zw/7025,16327670,1352641,?aHR0cHM6Ly92ay5jb20vcm9zZ29zc3RyYWtoX29mZmljaWFs"
+ x-orig-uri="https://vk.com/rosgosstrakh_official"
+ data-felis_link_id="92814" style="display: inline-block;text-decoration: none;">
+																			<img src="https://www.rgs.ru/upload/medialibrary/828/vk_96_g.png" alt="VK" width="48" height="48" style="padding: 0;margin: 0;width: 100%;display: inline-block;font-family: Arial,sans-serif;font-size: 16px;color: #353535;height: auto;">
+																		</a>
+																		</div>
+																	</td>
+																	<td style="padding: 0;margin: 0;height: 70px;vertical-align: middle;text-align: center;">
+																		<div class="img-wrapper smm-icon" style="padding: 0;margin: 0;display: inline-block;width: 48px;">
+																		<a
+href="http://rgsru.link.sendsay.ru/rgsru/92815,kfAIcdx4Qr38QMceURfW9Q/7025,16327670,1352641,?aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1JHUy5ydQ=="
+ x-orig-uri="https://www.facebook.com/RGS.ru"
+ data-felis_link_id="92815" style="display: inline-block;text-decoration: none;">
+																			<img src="https://www.rgs.ru/upload/medialibrary/c9a/fb_96_g.png" alt="Fb" width="48" height="48" style="padding: 0;margin: 0;width: 100%;display: inline-block;font-family: Arial,sans-serif;font-size: 16px;color: #353535;height: auto;">
+																		</a>
+																		</div>
+																	</td>
+																	<td style="padding: 0;margin: 0;height: 70px;vertical-align: middle;text-align: center;">
+																		<div class="img-wrapper smm-icon" style="padding: 0;margin: 0;display: inline-block;width: 48px;">
+																		<a
+href="http://rgsru.link.sendsay.ru/rgsru/92816,oZY0EadG6TmzBiKjUWef7w/7025,16327670,1352641,?aHR0cHM6Ly93d3cueW91dHViZS5jb20vdXNlci9Sb3Nnb3NzdHJha2g="
+ x-orig-uri="https://www.youtube.com/user/Rosgosstrakh"
+ data-felis_link_id="92816" style="display: inline-block;text-decoration: none;">
+																			<img class="smm-icon" src="https://www.rgs.ru/upload/medialibrary/7cd/yt_96_g.png" alt="Yt" width="48" height="48" style="padding: 0;margin: 0;width: 48px;display: inline-block;font-family: Arial,sans-serif;font-size: 16px;color: #353535;height: auto;">
+																		</a>
+																		</div>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													  <!--[if gte mso 9]>
+																</td>
+																<td valign="top" width="50%">
+													  <![endif]--><!---->
+														<div class="adaptive-block equal-footer" style="padding: 0;margin: 0;display: inline-block;vertical-align: top;width: 100%;max-width: 280px;">
+															<table class="smm-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="padding: 0;margin: 0;width: 100%;border-collapse: collapse;">
+															   <tr style="padding: 0;margin: 0;">
+																	<td style="padding: 0;margin: 0;height: 70px;vertical-align: middle;text-align: center;">
+																		<div class="img-wrapper smm-icon" style="padding: 0;margin: 0;display: inline-block;width: 48px;">
+																			<a
+href="http://rgsru.link.sendsay.ru/rgsru/92817,Ic9M45l9MM-tYT9CBoYAtA/7025,16327670,1352641,?aHR0cHM6Ly90d2l0dGVyLmNvbS9yZ3NfcnU="
+ x-orig-uri="https://twitter.com/rgs_ru"
+ data-felis_link_id="92817" style="display: inline-block;text-decoration: none;">
+																			<img class="smm-icon" src="https://www.rgs.ru/upload/medialibrary/717/tr_96_g.png" alt="Twit" width="48" height="48" style="padding: 0;margin: 0;width: 48px;display: inline-block;font-family: Arial,sans-serif;font-size: 16px;color: #353535;height: auto;">
+																			</a>
+																		</div>
+																	</td>
+																	<td style="padding: 0;margin: 0;height: 70px;vertical-align: middle;text-align: center;">
+																		  <a
+href="http://rgsru.link.sendsay.ru/rgsru/92818,NTCfwu8Fh4aj2E-r1__FyQ/7025,16327670,1352641,?aHR0cHM6Ly9pdHVuZXMuYXBwbGUuY29tL3J1L2FwcC9yb3Nnb3NzdHJhaC9pZDExNzEzNzA0NzA/bHM9MSZtdD04"
+ x-orig-uri="https://itunes.apple.com/ru/app/rosgosstrah/id1171370470?ls=1&mt=8"
+ data-felis_link_id="92818" style="display: inline-block;text-decoration: none;">
+																				<img class="smm-icon" src="https://www.rgs.ru/upload/medialibrary/d1e/ios_96_g.png" alt="Apple" width="48" height="48" style="padding: 0;margin: 0;width: 48px;display: inline-block;font-family: Arial,sans-serif;font-size: 16px;color: #353535;height: auto;">
+																		  </a>
+																	</td>
+																	<td style="padding: 0;margin: 0;height: 70px;vertical-align: middle;text-align: center;">
+																		  <a
+href="http://rgsru.link.sendsay.ru/rgsru/92819,G_wY07WIR4BjzjxT1GkPgA/7025,16327670,1352641,?aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPXJ1LnJncy5pbnN1cmFuY2U="
+ x-orig-uri="https://play.google.com/store/apps/details?id=ru.rgs.insurance"
+ data-felis_link_id="92819" style="display: inline-block;text-decoration: none;">
+																				<img class="smm-icon" src="https://www.rgs.ru/upload/medialibrary/f51/android_96_g.png" alt="Google" width="48" height="48" style="padding: 0;margin: 0;width: 48px;display: inline-block;font-family: Arial,sans-serif;font-size: 16px;color: #353535;height: auto;">
+																		  </a>
+																	</td>
+																</tr>
+															</table>
+														</div>
+													  <!--[if gte mso 9]>
+																</td>
+															</tr>
+														</table>
+													  <![endif]-->
+													  </div>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td class="v-padding" style="padding: 0;margin: 0;width: 5%;"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+
+
+						<!--Horizontal-space-20-->
+						<tr style="padding: 0;margin: 0;">
+						  <td class="hor hor20" align="center" style="padding: 0;margin: 0;line-height: 0;height: 20px;"></td>
+						</tr>
+						<tr style="padding: 0;margin: 0;">
+							<td class="text text-footer" style="padding: 0;margin: 0;vertical-align: top;font-family: Arial,sans-serif;font-size: 14px;font-size-adjust: none;-webkit-font-size-adjust: none;line-height: 1.4;letter-spacing: 0.02em;color: #353535;word-break: normal;hyphens: none;-webkit-hyphens: none;">
+								<a
+href="http://rgsru.link.sendsay.ru/rgsru/92820,66w9pKvKDY9uKZsyoRLGjw/7025,16327670,1352641,?aHR0cHM6Ly93d3cucmdzLnJ1Lw=="
+ x-orig-uri="https://www.rgs.ru/"
+ data-felis_link_id="92820" style="display: inline-block;text-decoration: none;"><span style="color: #353535;text-decoration: underline;">www.RGS.ru</span></a> • ПАО&nbsp;СК&nbsp;«Росгосстрах», лицензии Банка&nbsp;России на&nbsp;осуществление
+страхования СИ&nbsp;№&nbsp;0001, СЛ&nbsp;№&nbsp;0001, ОС&nbsp;№&nbsp;0001-02, ОС №&nbsp;0001-03, ОС&nbsp;№&nbsp;0001-04, ОС&nbsp;№&nbsp;0001-05
+и&nbsp;на&nbsp;осуществление перестрахования ПС&nbsp;№&nbsp;0001, выданы 23.05.2016, бессрочные. Реклама, не является офертой. Для расчета обратитесь на сайт компании <a
+href="http://rgsru.link.sendsay.ru/rgsru/92821,66w9pKvKDY9uKZsyoRLGjw/7025,16327670,1352641,?aHR0cHM6Ly93d3cucmdzLnJ1Lw=="
+ x-orig-uri="https://www.rgs.ru/"
+ data-felis_link_id="92821" style="display: inline-block;text-decoration: none;"> <span style="color: #353535;text-decoration: underline;">www.RGS.ru</span></a> или <a
+href="http://rgsru.link.sendsay.ru/rgsru/92822,y0SC8CqxiuAATcTeWTrEGA/7025,16327670,1352641,?aHR0cHM6Ly93d3cucmdzLnJ1L2NvbnRhY3RzL2xpc3Qud2Jw"
+ x-orig-uri="https://www.rgs.ru/contacts/list.wbp"
+ data-felis_link_id="92822" style="display:
+inline-block;text-decoration: none;"> <span style="color: #353535;text-decoration: underline;">в офис ПАО СК «Росгосстрах»</span></a> • Вы получили это письмо, потому что подписались на&nbsp;рассылку
+при&nbsp;оформлении страхового продукта в&nbsp;ПАО&nbsp;СК&nbsp;«Росгосстрах». <a href="https://sendsay.ru/backend/member/unsub/1QEKcj48YOb4xYI9sfrsTIaImtRUgscMQVgy6_uE7tjCHf1gF6NPoXXqF937Nx0nvX-QInI8YEHLdz8IbDfLXgtnsaQ"
+style="display: inline-block;text-decoration: none;"><span style="color:
+#353535;text-decoration: underline;">Отписаться&nbsp;от&nbsp;рассылки</span></a>
+							</td>
+						</tr>
+						<!--Horizontal-space-20-->
+						<tr style="padding: 0;margin: 0;">
+						  <td class="hor hor20" align="center" style="padding: 0;margin: 0;line-height: 0;height: 20px;"></td>
+						</tr>
+						<tr style="padding: 0;margin: 0;">
+							<td style="width: 600px;line-height: 0;padding: 0;margin: 0;" align="center">
+								<div class="img-wrapper eagle" style="padding: 0;margin: 0;display: inline-block;width: 100%;max-width: 111px;">
+									<img alt="орел" src="https://www.rgs.ru/upload/medialibrary/c2f/eagle_gray_100.png" width="111" height="50" style="padding: 0;margin: 0;width: 100%;display: inline-block;font-family: Arial,sans-serif;font-size: 16px;color: #353535;height: auto;">
+								</div>
+							</td>
+							</tr>
+						<tr style="padding: 0;margin: 0;">
+						  <td class="hor hor20" align="center" style="padding: 0;margin: 0;line-height: 0;height: 20px;"></td>
+						</tr>
+				</table><!--footer-->
+          </div>
+          <!--[if (gte mso 9)|(IE)]>
+          </td></tr>
+          </table>
+          <![endif]-->
+      	</td>
+	</tr>
+</table><!--Background-->
+</body>
+</html>
+
+<img x-noattach="1" src="https://image.sendsay.ru/1.gif/rgsru,7025,16327670,1352641/20180222090614,p548" alt="" height="1" width="1" border="0"><img x-noattach="1" src="https://image.sendsay.ru/0.gif/rgsru,7025,16327670,1352641/20180222090614,p548" alt="" height="1" width="1" border="0">
+
+
+--=felis-alternative=20180222092359=181252--

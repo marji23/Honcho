@@ -1,0 +1,3 @@
+recursive-include ../bin/static *
+global-include **/templates/**/*
+global-include **/static/**/*

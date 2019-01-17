@@ -1,0 +1,320 @@
+Delivered-To: abrahas.23@gmail.com
+Received: by 10.80.196.75 with SMTP id w11csp4949618edf;
+        Mon, 11 Sep 2017 14:38:50 -0700 (PDT)
+X-Received: by 10.80.142.203 with SMTP id x11mr9613581edx.154.1505165930060;
+        Mon, 11 Sep 2017 14:38:50 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1505165930; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YBq8eAfY/PB9fPzpbLTVa/DItiWOgL1RAIh8cwPRIFqwd0IjhW3AsNaLlE87o6snpM
+         F/BiOB9fsw0Dpht4ebyC7c9pVbIB9Fhx3kbn+gKTIVYYywKkLzaYdnbsuECHg6OEOJ79
+         d17uru3dIibwjpgEDIFmaRqFgFJxYWNUEa1h5eKowOG2lNkefrFlHIkOjlMxZJSb6vbe
+         P40XHDK0NV2qO52zzTQRGl6IA6zg5VoiSCgkUS8gFiCkVUgmwjzbKVURsNJi8k98RtvU
+         dU7qjiz8wphOvQ+ZauDHk7ufnx8bfUp7G8ktV2mhbRGAO5jekpwk0kEikS+aE429HTNr
+         jn1g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:in-reply-to:references:subject:auto-submitted:to
+         :from:dkim-signature:arc-authentication-results;
+        bh=sagBTndHyZg3G+ujk/QV+JyBqMTv23tzjRYdpHHmwjQ=;
+        b=N0Xiu8qVYU9j7WgK2HJR7n0wFlnZBRF14kGneizSTJ1beMo2lXpY66XfAH1zq5bPI3
+         pNVdIUrh7UUaZbBQZhgEjBXWkjnjJwfSfs8z+QA24LY9Bq8qbSOMY9HgEZ2yG22gxvYn
+         xlBnZ7y/mqyihbpYlXJBQ0EAxn4rASw5kc4PtvYaBe0V2YyI90LO2Sq8cdHP89Ru3AlY
+         Tr0MK2NWlQ3Oi+tFekknAgkZCeRfVbrRybwvzqU5F94LvHJ+gCEx5b0jZSd+XJTKt1rW
+         U0Ohjgw1iGLN4QppNZi/eqy/F6NTgk69wlsdnw9HNZO9ih1Zx2DYLydoCAyC2Gf05dsb
+         mvdg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@googlemail.com header.s=20161025 header.b=Ym+k+b7n;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) smtp.helo=mail-sor-f69.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com
+Return-Path: <>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id h55sor2754562eda.4.2017.09.11.14.38.50
+        for <abrahas.23@gmail.com>
+        (Google Transport Security);
+        Mon, 11 Sep 2017 14:38:50 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlemail.com header.s=20161025 header.b=Ym+k+b7n;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) smtp.helo=mail-sor-f69.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20161025;
+        h=from:to:auto-submitted:subject:references:in-reply-to:message-id
+         :date;
+        bh=sagBTndHyZg3G+ujk/QV+JyBqMTv23tzjRYdpHHmwjQ=;
+        b=Ym+k+b7nlcou3rm/BAnFiHHCSSO9aig7m8uCDeVPDzwH8N/O3oe3GG4c7MBHeUjqvP
+         eaILaPoVIXRaxJq4p4/ddiEOL+CqyP6zeltYaDM5wtmAmDR1cAxgu0tv3chx316FKwNJ
+         7aPtfzLbhSkgyVDpEACuN8CPrq5oNQScZ2/DfdNUUyty1VVvJU+ILU8F3QSD6Ti+nrHr
+         Rtf6CGaFztO+KvtSwYWPP+jonX2UcQlL2ajH915Emu+gKOlVj3WpX9sE34qXLZeBsPyr
+         +SVpLsmhKVd2jKP0wTu7vGOZpeDXlX8yh5VX53QPLjkn0k6jsX6cML7z3KOcf8BjlwNX
+         4Ayg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:to:auto-submitted:subject:references
+         :in-reply-to:message-id:date;
+        bh=sagBTndHyZg3G+ujk/QV+JyBqMTv23tzjRYdpHHmwjQ=;
+        b=F0+m9LHG4MAU1pqyOQ5pZD0PMneKQgTPOeoiTYGqVyYdwwG1XDXueyE6gr4dlSGEfo
+         ZlG+nc96UiwqT0ZbEyGs0a3roz1sceq2gHly/6GFZgqqbIE6OXEViU0MikF5mKzWEgoX
+         vJK12VllmcJfO/AThyvmIQGdPIGWmOjUMkX+jQP4bXuujta9EYsTsyPvodtmLBWOLxmh
+         QLrU67h61dBBueDt2FskT42jxPMgQ+bqwFYdq659ylKEVdGmcCn0KkIbIWXQEe+BcQ+8
+         2Vmn1XSNqKbPG7324+VnHKv0VQ3week2z7WLANOL254Z7EkvsDCOXKexQHZN1xTbePWy
+         ahpg==
+X-Gm-Message-State: AHPjjUiszvY4aUDriJ7pJv6q9g7yATbO2rEe66r6mzegQleOEhBbOxZ2
+	9HF7g5UETeSf7j4QnZBNlf6ZzSgHpADJ/OGCmsu4QA==
+X-Google-Smtp-Source: ADKCNb6Ojp9mb6L3kygmgp8nzJnNSXu1CM1+kF6ifBgcvA4gdImB7tZsZmQI/2YubFMZUlONyMIzk0murcWvpyGTIVXpV2Sb062LwHU=
+X-Received: by 10.80.179.150 with SMTP id s22mr10769378edd.34.1505165930005;
+        Mon, 11 Sep 2017 14:38:50 -0700 (PDT)
+Content-Type: multipart/report; boundary="94eb2c0a522095f4b80558f0c07e"; report-type=delivery-status
+Return-Path: <>
+Received: by 10.80.179.150 with SMTP id s22mr10973322edd.34; Mon, 11 Sep 2017
+ 14:38:50 -0700 (PDT)
+From: Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+To: abrahas.23@gmail.com
+Auto-Submitted: auto-replied
+Subject: Delivery Status Notification (Failure)
+References: <CALCrHkA6d6yrda5yczZiuide6L0rTMydKXNN8HkNDDrZGgOvvg@mail.gmail.com>
+In-Reply-To: <CALCrHkA6d6yrda5yczZiuide6L0rTMydKXNN8HkNDDrZGgOvvg@mail.gmail.com>
+X-Failed-Recipients: ulf.sibelius@innere.med.uni-giessen.deundefined
+Message-ID: <59b7026a.96b3500a.47add.8dc4.GMRIR@mx.google.com>
+Date: Mon, 11 Sep 2017 14:38:50 -0700 (PDT)
+
+--94eb2c0a522095f4b80558f0c07e
+Content-Type: multipart/related; boundary="94eb2c0a522095ffc20558f0c07f"
+
+--94eb2c0a522095ffc20558f0c07f
+Content-Type: multipart/alternative; boundary="94eb2c0a522095ffd50558f0c080"
+
+--94eb2c0a522095ffd50558f0c080
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+CioqINCQ0LTRgNC10YEg0L3QtSDQvdCw0LnQtNC10L0gKioKCtCh0L7QvtCx0YnQtdC90LjRjiDQ
+sNC00YDQtdGB0LDRgtGDIHVsZi5zaWJlbGl1c0Bpbm5lcmUubWVkLnVuaS1naWVzc2VuLmRldW5k
+ZWZpbmVkINC90LUg0LTQvtGB0YLQsNCy0LvQtdC90L4sINGC0LDQuiDQutCw0Log0LTQvtC80LXQ
+vSBpbm5lcmUubWVkLnVuaS1naWVzc2VuLmRldW5kZWZpbmVkINC90LUg0L3QsNC50LTQtdC9LiDQ
+o9C00LDQu9C40YLQtSDQv9GA0L7QsdC10LvRiywg0LjRgdC/0YDQsNCy0YzRgtC1INC+0L/QtdGH
+0LDRgtC60Lgg0Lgg0L/QvtCy0YLQvtGA0LjRgtC1INC/0L7Qv9GL0YLQutGDLgoKCgrQn9C+0LvR
+g9GH0LXQvdC90YvQuSDQvtGC0LLQtdGCOgoKRE5TIEVycm9yOiAxMTkxMTkzNyBETlMgdHlwZSAn
+bXgnIGxvb2t1cCBvZiBpbm5lcmUubWVkLnVuaS1naWVzc2VuLmRldW5kZWZpbmVkIHJlc3BvbmRl
+ZCB3aXRoIGNvZGUgTlhET01BSU4NCkRvbWFpbiBuYW1lIG5vdCBmb3VuZDogaW5uZXJlLm1lZC51
+bmktZ2llc3Nlbi5kZXVuZGVmaW5lZAo=
+--94eb2c0a522095ffd50558f0c080
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html>
+<head>
+<style>
+* {
+font-family:Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<table cellpadding=3D"0" cellspacing=3D"0" class=3D"email-wrapper" style=3D=
+"padding-top:32px;background-color:#ffffff;"><tbody>
+<tr><td>
+<table cellpadding=3D0 cellspacing=3D0><tbody>
+<tr><td style=3D"max-width:560px;padding:24px 24px 32px;background-color:#f=
+afafa;border:1px solid #e0e0e0;border-radius:2px">
+<img style=3D"padding:0 24px 16px 0;float:left" width=3D72 height=3D72 alt=
+=3D"=D0=97=D0=BD=D0=B0=D1=87=D0=BE=D0=BA =D0=BE=D1=88=D0=B8=D0=B1=D0=BA=D0=
+=B8" src=3D"cid:icon.png">
+<table style=3D"min-width:272px;padding-top:8px"><tbody>
+<tr><td><h2 style=3D"font-size:20px;color:#212121;font-weight:bold;margin:0=
+">
+=D0=90=D0=B4=D1=80=D0=B5=D1=81 =D0=BD=D0=B5 =D0=BD=D0=B0=D0=B9=D0=B4=D0=B5=
+=D0=BD
+</h2></td></tr>
+<tr><td style=3D"padding-top:20px;color:#757575;font-size:16px;font-weight:=
+normal;text-align:left">
+=D0=A1=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D0=BD=D0=B8=D1=8E =D0=B0=D0=B4=D1=80=
+=D0=B5=D1=81=D0=B0=D1=82=D1=83 <a style=3D'color:#212121;text-decoration:no=
+ne'><b>ulf.sibelius@innere.med.uni-giessen.deundefined</b></a> =D0=BD=D0=B5=
+ =D0=B4=D0=BE=D1=81=D1=82=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=BE, =D1=82=D0=B0=
+=D0=BA =D0=BA=D0=B0=D0=BA =D0=B4=D0=BE=D0=BC=D0=B5=D0=BD innere.med.uni-gie=
+ssen.deundefined =D0=BD=D0=B5 =D0=BD=D0=B0=D0=B9=D0=B4=D0=B5=D0=BD. =D0=A3=
+=D0=B4=D0=B0=D0=BB=D0=B8=D1=82=D0=B5 =D0=BF=D1=80=D0=BE=D0=B1=D0=B5=D0=BB=
+=D1=8B, =D0=B8=D1=81=D0=BF=D1=80=D0=B0=D0=B2=D1=8C=D1=82=D0=B5 =D0=BE=D0=BF=
+=D0=B5=D1=87=D0=B0=D1=82=D0=BA=D0=B8 =D0=B8 =D0=BF=D0=BE=D0=B2=D1=82=D0=BE=
+=D1=80=D0=B8=D1=82=D0=B5 =D0=BF=D0=BE=D0=BF=D1=8B=D1=82=D0=BA=D1=83.
+</td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+</td></tr>
+<tr style=3D"border:none;background-color:#fff;font-size:12.8px;width:90%">
+<td align=3D"left" style=3D"padding:48px 10px">
+=D0=9F=D0=BE=D0=BB=D1=83=D1=87=D0=B5=D0=BD=D0=BD=D1=8B=D0=B9 =D0=BE=D1=82=
+=D0=B2=D0=B5=D1=82:<br/>
+<p style=3D"font-family:monospace">
+DNS Error: 11911937 DNS type &#39;mx&#39; lookup of innere.med.uni-giessen.=
+deundefined responded with code NXDOMAIN
+Domain name not found: innere.med.uni-giessen.deundefined
+</p>
+</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+--94eb2c0a522095ffd50558f0c080--
+--94eb2c0a522095ffc20558f0c07f
+Content-Type: image/png; name="icon.png"
+Content-Disposition: attachment; filename="icon.png"
+Content-Transfer-Encoding: base64
+Content-ID: <icon.png>
+
+iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABTdJREFUeNrsnD9sFEcUh5+PRMqZ
+yA0SPhAUQAQFUkyTgiBASARo6QApqVIkfdxGFJFSgGhJAUIiBaQB0ZIOKVCkwUgURjIg2fxL4kS+
+YDvkbC/388bi8N16Z4/d7J/5PsniuD3fyePP772ZeTsDQRAYQL/UGAJAIEAgQCBAIAAEAgQCBAIE
+AkAgyJT3Mv+Eq7vYK8mTE+MDRCAghQECAeRQA5V2ZOpmg5vDx3NPzRbmGRMEcmTrEbNNB8zWfRD+
+f/Efs2e3zCZvMjaksBg27TfbcuSNPEKP9ZyuAQKtHX2O9ncNgWC57umMPKvRNb0GEKgnLoUyxTQC
+rcns0/6uIRAs8/hGf9cQCJZpTpjdO2f25/03z+mxntM1eLtsZAgiUtX4JcaBCAQIBAgECARQ8CJa
+G5jab4J4pm4WZmO3OALVh802fIwcLkyPkcKAGggAgQCBAIEAgQCBABAIEAjKA/1AnahhbO5FdOOY
+VsrrDbPBYcYKgf5D2wLaV3p+22xh1u17tO3S+DTcvxvagUDeivPgx/a/95J/73w7Sj26Hn4pKo2M
+ehuV/KyBJM6d0f7k6RKx/R63vvL2tmf/ItDdM2ZTP6f7nkp9Y2fDx1v9akmpIU+KSCLVUghUQfSL
+zVKeTklbLxGoctw/nzC5rw8L5KRNbkpnKq6pgSqEClzNnFzY+XnYWrt6VpVk1vbwWvg+RKCKMOUw
+Q1LEOXA+/MX3mpJvGDHb265xtnzmFoUK1HaKQGlMtePYM+q2KKjXuaS1NJYIEKgI8jhEgqHt4cqy
+Ky53j3hyHz2bqSLp2o2LbJ7MxKovkGqXteoWpaOk96O9/yF/dF7NwlS36AuIQIBA5celQK4PIxBE
+4LLzrtoLgaALdSy6CJRkWQCBPGLsTHznomZ9nszUECgJ2ml3WWHe+QVFNPSQx6UdZNtxr9pbEShN
+eTTz8mQXHoHSlke7+Z+c9m6VGoHSkEfs/trLW3wQKApN1V3lGfnGu2Z6BFoLtYCs3GWBPAiUCLVh
+/HoaeRCoT9R873KLM/IgUBfapnCpe5AHgXry4pf412ihEHkQqCdxd5VqrcezhUIESsJMTJ+Pdthp
+Z0WgyNlXXPHc2Mc4IVAELl2Gnh8mhUDvCkfbIVAkcbf/aOoO3fMKhqAD3frTa4quwpn0hUDOkQhI
+YYBAgECAQAAU0QlYObl+5Ug8NcprZkZxjUCxRPVA6zmtEXHCBykskrhjgHXN09PoEcgFl4M4H11j
+nBAoApcj6ZoPGScEAgTKApcDoTw5sgWB+sGlz1n90IBAPdE6j1o21PfcC11jLagL1oFWRyGlKU3p
+OxcSJQ7NZAjkhHp/uG2HFAYIBAgECASAQIBAgECAQAAIBOkxEARBtp9wdVfAMOfIifEBIhCQwgCB
+ABAI0oV2jhxZ+nfBatuPZfgBCy0Eqqo8c01b+uu51XZvzOgDWoHNTGR+pCwpLEd5svuAZXlO2uEr
+PyEQ8hRWHgRCHmqg0sjTnLalv6crJQ8C/U8stqNO0I4+VZOHFIY8COS1PGL2ybd5yUMKK7s8zYmL
+dujyd3n+nESgcsvzZd4/KwIhDwIhT35QA6UyE1qyxZnfvJMHgdKS549JC1qvvJOHFIY8CFR5eV5O
+XimqPAhUdHnmfx+zgxdOFXkoqIGKKs/cswnb/8Oeog8HEai48nxUhiFBIORBIOShBioskkbySCLk
+IQIhDwIhj28p7FApR6b1qlEbHGpkO/rr6215vi/zH1r2x7tApSGFAQIBAgECAQIBIBAgECAQIBBA
+LK8FGADCTxYrr+EVJgAAAABJRU5ErkJggg==
+--94eb2c0a522095ffc20558f0c07f--
+--94eb2c0a522095f4b80558f0c07e
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; googlemail.com
+Arrival-Date: Mon, 11 Sep 2017 14:38:49 -0700 (PDT)
+X-Original-Message-ID: <CALCrHkA6d6yrda5yczZiuide6L0rTMydKXNN8HkNDDrZGgOvvg@mail.gmail.com>
+
+Final-Recipient: rfc822; ulf.sibelius@innere.med.uni-giessen.deundefined
+Action: failed
+Status: 4.0.0
+Diagnostic-Code: smtp; DNS Error: 11911937 DNS type 'mx' lookup of innere.med.uni-giessen.deundefined responded with code NXDOMAIN
+ Domain name not found: innere.med.uni-giessen.deundefined
+Last-Attempt-Date: Mon, 11 Sep 2017 14:38:50 -0700 (PDT)
+
+--94eb2c0a522095f4b80558f0c07e
+Content-Type: message/rfc822
+
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=7N5qSdUmfOvO4S8o4f9C6TqNDr2WybvervW0M8czz4Q=;
+        b=Tz0ZkUFCZvK2RvrT+qCWx1APk8XufipK3042dGyLq6GThZdY6VYiGRXNiqp17LybLx
+         KnvM3Vdp1NwoOnorcBGEGOQ3aLoCbwO4/t3GlwrCfTJSBeY1YQRwLeO5XVrmsWJPav6S
+         q6sm9ThdQbWUnM2tHGuhDlwomqCC6GidMw+gFuWyqhZl7h2hiMbHLdlTYItH/xw8s4DH
+         iL222gFTXicgP/dMJJLVhGxEmDV1nXJLFUulB1bbDA5m7JCGuyfGSEdR3ABeLhNh6rX1
+         3V0GtcndRQMg/XOdUKWPJBKX7Szv+r6LuFR+2r/t+//XRf9CrmiGWAxq4EwQdK5KKcTh
+         2u6w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=7N5qSdUmfOvO4S8o4f9C6TqNDr2WybvervW0M8czz4Q=;
+        b=HzzRxwJVtOP3PFCj3TTzqL9O5N5vCL9d7UmEd00oHfk65EhdLdhQ5J8b7AhO3FKmAZ
+         cvfYK6osZiBPLID8PI6XrOO13FdE3Ue6DwXhcZ6Ees8t7fzFkwt1PThMlWQpCuokazeR
+         manA0x/FHGXghgAQzs3w/dtFsxSoMehPApjZgSvqNdQNp2i/qscHumKw/qozz61NSrw1
+         VaqdAr3FSc9pfAKm0+GYOyHyvMlEbON+KFAIkbY8VNG843/dMO6sk2QQcTomfzomDEVn
+         B33gIdXN6iwmDQsiT62OX91hJXX+ODLFR2IZI4lU+tBBmztQLLU9d0gia5Lo2IyMCMIR
+         +yWQ==
+X-Gm-Message-State: AHPjjUgdSK6f5ELtO45LHLmxbxm8lp8SM7hObN3Fd0fPGPthqnVGT9YJ
+	lTsz8d6ihcB44P3iXfEEGIWsuiKglIyrKpc=
+X-Google-Smtp-Source: ADKCNb6CbUepVLy45yzJkZF1JiVMoc14MS9f/CnMX1QTJ/J6Qyc+txDz6FMNjvislBeZHlw7Fsu0JD4ngNIIfB36L98=
+X-Received: by 10.80.179.150 with SMTP id s22mr10769356edd.34.1505165929147;
+ Mon, 11 Sep 2017 14:38:49 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.80.160.231 with HTTP; Mon, 11 Sep 2017 14:38:47 -0700 (PDT)
+From: abrahas <abrahas.23@gmail.com>
+Date: Tue, 12 Sep 2017 00:38:47 +0300
+Message-ID: <CALCrHkA6d6yrda5yczZiuide6L0rTMydKXNN8HkNDDrZGgOvvg@mail.gmail.com>
+Subject: Ksenia Mishaeva. Neuroblastoma Stage 4 relapse
+To: ulf.sibelius@innere.med.uni-giessen.deundefined, 
+	Tanja.Miltner@innere.med.uni-giessen.de
+Content-Type: multipart/mixed; boundary="94eb2c0a52208979be0558f0c022"
+
+--94eb2c0a52208979be0558f0c022
+Content-Type: multipart/alternative; boundary="94eb2c0a52208979bb0558f0c020"
+
+--94eb2c0a52208979bb0558f0c020
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Prof. Dr. Ulf Sibelius
+
+Ksenia Mishaeva is two years girl who has Neuroblastoma Stage 4 relapse.
+Doctors in Russia are not able to help her.
+We hope that you will be able to help her. Please, find the time to check
+her papers in attachments and make a decision if the treatment is possible.
+
+We are waiting of your decision. Ksenia's condition getting worse.
+
+Please give us a feedback when we can expect any answer. Or if we need to
+provide any additional information.
+
+-- 
+Regards,
+Pavel Yushkovskiy
+
+
+<https://mailtrack.io/> Sent with Mailtrack
+<https://mailtrack.io/install?source=signature&lang=en&referral=abrahas.23@gmail.com&idSignature=22>
+<#>
+
+--94eb2c0a52208979bb0558f0c020
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><img width=3D"0" height=3D"0" class=3D"mailtrack-img" alt=
+=3D"" style=3D"display:flex" src=3D"https://mailtrack.io/trace/mail/d6c6b8a=
+e8f61f3b26297ca22b05c27d80bf9e65c.png?u=3D2084761"><div class=3D"gmail_quot=
+e"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=
+=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"lt=
+r"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><=
+div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"g=
+mail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><d=
+iv class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div d=
+ir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div class=3D"gmail_=
+quote"><div dir=3D"ltr"><div class=3D"gmail_quote"><div dir=3D"ltr"><div cl=
+ass=3D"gmail_quote"><div dir=3D"ltr"><div>Dear=C2=A0<span style=3D"color:rg=
+b(0,0,0);font-family:Arial;font-size:13px;white-space:pre-wrap">Prof. Dr. U=
+lf Sibelius</span></div><div><br></div><div>Ksenia Mishaeva is two years gi=
+rl who has=C2=A0<span style=3D"font-size:12.8px">Neuroblastoma=C2=A0Stage 4=
+=C2=A0relapse. Doctors in Russia are not able to help her.=C2=A0</span></di=
+v><div><span style=3D"font-size:12.8px">We hope that you will be able to he=
+lp her. Please, find the time to check her papers in attachments and make a=
+ decision if the treatment=C2=A0is possible.</span><br></div><div><div><br>=
+</div><div><span style=3D"font-size:12.8px">We are waiting of your decision=
+. Ksenia&#39;s condition getting worse.</span><br></div><div><br></div><div=
+>Please give us a feedback when we can expect any answer. Or if we need to =
+provide any additional information.</div><span class=3D"gmail-HOEnZb"><font=
+ color=3D"#888888"><span class=3D"gmail-m_-6444983222790165775gmail-HOEnZb"=
+><font color=3D"#888888"><span class=3D"gmail-m_-6444983222790165775gmail-m=
+_-4073740439759802273gmail-HOEnZb"><font color=3D"#888888"><span class=3D"g=
+mail-m_-6444983222790165775gmail-m_-4073740439759802273gmail-m_-32195457516=
+75004682HOEnZb"><font color=3D"#888888"><span class=3D"gmail-m_-64449832227=
+90165775gmail-m_-4073740439759802273gmail-m_-3219545751675004682m_415788274=
+8285975763gmail-HOEnZb"><font color=3D"#888888"><span class=3D"gmail-m_-644=
+4983222790165775gmail-m_-4073740439759802273gmail-m_-3219545751675004682m_4=
+157882748285975763gmail-m_-3119653213607216497gmail-HOEnZb"><font color=3D"=
+#888888"><span class=3D"gmail-m_-6444983222790165775gmail-m_-40737404397598=
+02273gmail-m_-3219545751675004682m_4157882748285975763gmail-m_-311965321360=
+7216497gmail-m_3687360367479481209gmail-HOEnZb"><font color=3D"#888888"><sp=
+an class=3D"gmail-m_-6444983222790165775gmail-m_-4073740439759802273gmail-m=
+_-3219545751675004682m_4157882748285975763gmail-m_-3119653213607216497gmail=
+-m_3687360367479481209gmail-m_-1463520323272932632gmail-HOEnZb"><font color=
+=3D"#888888"><span class=3D"gmail-m_-6444983222790165775gmail-m_-4073740439=
+759802273gmail-m_-3219545751675004682m_4157882748285975763gmail-m_
+----- Message truncated -----
+
+--94eb2c0a522095f4b80558f0c07e--
